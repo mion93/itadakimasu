@@ -1,0 +1,18 @@
+nav ul li:hover {
+   background-color: #ff5252;
+}
+
+.sidenav li:hover {
+    background-color: #ff5252;
+}
+
+
+
+#copyright:hover {
+    color: #ff5252;
+}
+
+.brand-logo {
+    font-family: 'Fredoka One', cursive;
+}
+

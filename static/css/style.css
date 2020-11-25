@@ -14,5 +14,18 @@ nav ul li:hover {
 
 .brand-logo {
     font-family: 'Fredoka One', cursive;
+ 
 }
 
+@media screen and (max-width: 600px) {
+ 
+
+   #logo {
+       position: relative;
+   }
+
+   #logored {
+       position: relative;
+       padding: 5px;
+   }
+}

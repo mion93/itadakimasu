@@ -23,10 +23,10 @@
         <!-- top navbar -->
 		<nav class="nav-extended text-shadow black">
 			<div class="nav-wrapper">
-				<a href="" class="brand-logo" id="logo"><i class="fas fa-circle red-text"></i>ITADAKIMASU</a>
+				<a href="{{ url_for('get_recipes') }}" class="brand-logo" id="logo"><i class="fas fa-circle red-text" id="logored"></i>ITADAKIMASU</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right pulse"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down black-text" id="navbar">
-					<li><a href="">HOME</a></li>
+					<li><a href="{{ url_for('get_recipes') }}">HOME</a></li>
 					<li><a href="#">PROFILE</a></li>
 					<li><a href="#">ADD RECIPE</a></li>
 					<li><a href="#">LOG OUT</a></li>
@@ -39,7 +39,7 @@
         <!-- mobile sidenav -->
 		<ul class="sidenav black-text" id="mobile-demo">
             
-            <li><a href="">Home</a></li>
+            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
             <li><a href="#">Profile</a></li>
             <li><a href="#">Add Recipe</a></li>
             <li><a href="#">Log Out</a></li>

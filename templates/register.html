@@ -4,7 +4,7 @@
 
 
 
-<main>
+<main id="register_page">
 
 <!--parallax-->
 
@@ -17,8 +17,8 @@
 		
 	
 		<div class="row">
-			<form class="col s12 m8 offset-m2 " method="POST" action="{{ url_for('register') }}">
-				<div class="card-panel  grey lighten-5">
+			<form class="col s12 m8 offset-m2 " method="POST" action="{{ url_for('register') }}" >
+				<div class="card-panel center-align grey lighten-5" id="formregister">
                 <h4 class="center-align black-text" id="register-header">REGISTER</h4>
 					<!-- username -->
 					<div class="row">
@@ -38,7 +38,7 @@
 					</div>
 					<!-- register -->
 					<div class="row">
-						<button type="submit" class="col s12 m8 offset-m2 waves-effect waves-light btn-large center-align red accent-2 darken-4 text-shadow">
+						<button type="submit" class="col s12 m8 offset-m2 waves-effect waves-light btn-large center-align red accent-2 darken-4 text-shadow" id="register_button">
 	                        Register <i class="fas fa-sign-in-alt"></i>
 	                    </button>
 					</div>

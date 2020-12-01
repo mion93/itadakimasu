@@ -92,3 +92,8 @@ nav ul li:hover {
 
 
 
+.recipe-container {
+     opacity: 0.9;
+    font-family: 'Open-sans', sans-serif;
+}
+

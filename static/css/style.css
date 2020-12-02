@@ -1,3 +1,4 @@
+
 nav ul li:hover {
    background-color: #ff5252;
 }
@@ -57,7 +58,7 @@ nav ul li:hover {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url('https://images.unsplash.com/photo-1565941072372-0f0f10c8b7dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80');
+    background-image:;
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -97,3 +98,21 @@ nav ul li:hover {
     font-family: 'Open-sans', sans-serif;
 }
 
+
+
+
+
+
+.slider .btn {
+  margin-top: 20px;
+  padding: 20 60 60 20px;
+  border-radius: 10px;
+
+}
+
+
+
+
+#discover_japan {
+    font-family: 'Lato', sans-serif;
+}

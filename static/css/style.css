@@ -116,3 +116,15 @@ nav ul li:hover {
 #discover_japan {
     font-family: 'Lato', sans-serif;
 }
+
+
+#row_flashes {
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 1 1 1 2px black;
+}
+
+
+#username_profile {
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 1 1 1 2px black;
+}

@@ -20,3 +20,8 @@ $(document).ready(function(){
         transition: 500,
         interval: 6000
       });
+
+
+
+  const mb = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(mb, {});

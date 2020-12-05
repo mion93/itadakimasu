@@ -1,4 +1,5 @@
 
+/* navbar */
 nav ul li:hover {
    background-color: #ff5252;
 }
@@ -7,19 +8,12 @@ nav ul li:hover {
     background-color: #ff5252;
 }
 
-#copyright {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-#copyright:hover {
-    color: #ff5252;
-}
 
 .brand-logo {
     font-family: 'Fredoka One', cursive;
  
 }
+
 
 @media screen and (max-width: 600px) {
  
@@ -34,6 +28,19 @@ nav ul li:hover {
    }
 }
 
+/* footer copyright */
+#copyright {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#copyright:hover {
+    color: #ff5252;
+}
+
+
+
+/* INPUT FIELD FOR REGISTRATION LOGIN FORM */
 
 .input-field label {
      color: #ff5252;
@@ -58,7 +65,7 @@ nav ul li:hover {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image:;
+    background-color: whitesmoke;
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -67,6 +74,8 @@ nav ul li:hover {
   main {
     flex: 1 0 auto;
   }
+
+
 
 .flashes h4 {
     line-height: 2;
@@ -92,7 +101,7 @@ nav ul li:hover {
 }
 
 
-
+/* recipe container */
 .recipe-container {
      opacity: 0.9;
     font-family: 'Open-sans', sans-serif;
@@ -101,7 +110,7 @@ nav ul li:hover {
 
 
 
-
+/* main hero button */
 
 .slider .btn {
   margin-top: 20px;
@@ -112,19 +121,57 @@ nav ul li:hover {
 
 
 
+.hero-image {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* gallery */
+
+
 
 #discover_japan {
     font-family: 'Lato', sans-serif;
 }
-
+/* row flashes */
 
 #row_flashes {
     font-family: 'Fredoka One', cursive;
     text-shadow: 1 1 1 2px black;
 }
-
+/* username profile */
 
 #username_profile {
     font-family: 'Fredoka One', cursive;
     text-shadow: 1 1 1 2px black;
+}
+
+/* Placeholder */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+/* RECIPE CARD */
+
+
+
+.card-image {
+   width: 85%;
+   height: 100px;
+   overflow: hidden;
+   margin: auto;
+   border-radius: 2px;
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+   height: 100px;
+   object-fit: cover;
+}
+
+.recipe-container {
+    height: 300px;
 }

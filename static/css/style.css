@@ -28,7 +28,7 @@ nav ul li:hover {
    }
 }
 
-/* footer copyright */
+/* footer  */
 #copyright {
     margin-top: 5px;
     margin-bottom: 10px;
@@ -39,6 +39,10 @@ nav ul li:hover {
 }
 
 
+
+.social-buttons:hover {
+    color: #ff5252;
+}
 
 /* INPUT FIELD FOR REGISTRATION LOGIN FORM */
 
@@ -183,3 +187,7 @@ nav ul li:hover {
     font-family: 'Open-sans', sans-serif;
     
 }
+
+
+/* FOOTER SOCIAL */
+

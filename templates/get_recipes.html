@@ -23,7 +23,7 @@
      
     </ul>
   </section>
-
+<!--cards recipes-->
 
 <div class="recipe-container card-container">
 	<div class="row center-align">
@@ -32,15 +32,15 @@
 
 
 		<div class="col s12 m3" style="max-width: 100%;">
-			<div class="card small">
+			<div class="card small recipe-card">
 				<div class="card-image">
 					<img src="{{ recipe.image_url }}" class="responsive-img"></div>
 					<div class="card-content">
-						<span class="card-title"><b>{{ recipe.recipe_name }}</b></span>
-						<span> <i class="fas fa-list-ul"></i> Category: {{ recipe.category_name}}</span><br>
-						<span> <i class="fas fa-clock"></i>   Time: {{ recipe.prep_time }}</span><br></div>
+						<span><h6 class="title-card"><b>{{ recipe.recipe_name }}</b></h6></span>
+						<span> <i class="fas fa-list-ul"></i> CATEGORY: {{ recipe.category_name}}</span><br>
+						<span> <i class="fas fa-clock"></i>   TIME: {{ recipe.prep_time }}</span><br></div>
 						<div class="card-action">
-							<a href="" class="red-text">Show Recipe</a></div>
+							<a href="" class="red accent-2 btn-small waves-light waves-effect">Show Recipe</a></div>
 					</div>
 				</div>
 		
@@ -53,11 +53,9 @@
 		</div>
 
 
-    <div class="parallax-container" style="max-height: 200px;">
-      <div class="parallax"><img src="https://images.unsplash.com/photo-1596352670192-5a95e357df7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></div>
-    </div>
+    
 
-
+<!--gallery -->
     <section id="gallery" class="section section-gallery scrollspy">
     <div class="container">
       <h4 class="center">
@@ -91,6 +89,13 @@
 
       
     </div>
+  </section>
+<!--parallax-->
+  <section>
+  <div class="parallax-container" style="max-height: 200px;">
+      <div class="parallax"><img src="https://images.unsplash.com/photo-1596352670192-5a95e357df7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"></div>
+    </div>
+
   </section>
 
 {% endblock %}

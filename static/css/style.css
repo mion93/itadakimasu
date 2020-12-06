@@ -131,7 +131,17 @@ nav ul li:hover {
 }
 
 
-/* GALLERY */
+
+
+/* EMBED VIDEO */
+
+
+
+iframe {
+   display: block;
+   margin: 0 auto;
+}
+/* HOME GALLERY */
 
 
 
@@ -218,5 +228,15 @@ nav ul li:hover {
 
 .book-title {
     font-family: 'Open-sans', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
+    
+}
+
+
+
+.book-card {
+  overflow: hidden;
+  max-width: 50%;
+  height: 90%;
+
 }

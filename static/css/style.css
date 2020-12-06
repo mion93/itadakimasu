@@ -87,7 +87,7 @@ nav ul li:hover {
 
 
 .card-panel {
-    border-radius: 20px;
+    border-radius: 5px;
         opacity: 0.9;
 }
 
@@ -110,6 +110,7 @@ nav ul li:hover {
 
 #row_flashes {
     font-family: 'Lato', sans-serif;
+    margin-top: 20px;
     text-shadow: 1 1 1 2px black;
 }
 
@@ -130,7 +131,7 @@ nav ul li:hover {
 }
 
 
-/* gallery */
+/* GALLERY */
 
 
 
@@ -138,12 +139,34 @@ nav ul li:hover {
     font-family: 'Lato', sans-serif;
 }
 
-/* username profile */
+/* PROFILE PAGE */
 
 #username_profile {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Lato', sans-serif;
     text-shadow: 1 1 1 2px black;
+     font-style: normal; 
 }
+
+.background-profile {
+    background-image: url('https://images.unsplash.com/photo-1551218372-22e08ee09d3b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80');
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 /* Placeholder */
 
@@ -189,5 +212,11 @@ nav ul li:hover {
 }
 
 
-/* FOOTER SOCIAL */
+/* SHOP CARDS */
 
+
+
+.book-title {
+    font-family: 'Open-sans', sans-serif;
+    font-size: 20px;
+}

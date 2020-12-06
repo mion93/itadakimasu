@@ -98,6 +98,13 @@ def logout():
     return redirect(url_for("login"))
 
 
+
+# Shop recipe books function
+@app.route("/shop")
+def shop():
+    return render_template("shop.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

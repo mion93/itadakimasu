@@ -32,6 +32,8 @@ nav ul li:hover {
 #copyright {
     margin-top: 5px;
     margin-bottom: 10px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+
 }
 
 #copyright:hover {
@@ -53,14 +55,15 @@ nav ul li:hover {
 
 
 
-.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+.input-field input[type=text]:focus, input[type=password]:focus, .materialize-textarea:focus:not([readonly]) {
  border-bottom: 1px solid #ff5252 !important;
  box-shadow: 0 1px 0 0  #ff5252 !important;
 }
 
 
 #register-header {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
 
 
@@ -87,7 +90,7 @@ nav ul li:hover {
 
 
 .card-panel {
-    border-radius: 5px;
+    border-radius: 10px;
         opacity: 0.9;
 }
 
@@ -109,7 +112,8 @@ nav ul li:hover {
 /* row flashes */
 
 #row_flashes {
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Montserrat', sans-serif;
+
     margin-top: 20px;
     text-shadow: 1 1 1 2px black;
 }
@@ -138,24 +142,25 @@ nav ul li:hover {
 
 
 
-
-}
-    @media (max-width: 950px)
-        { 
-    .video-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:40px;
-}
-.video-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
+.video-container {
+    overflow: hidden;
+    position: relative;
     width:100%;
-    position:absolute;
 }
-            }
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* HOME GALLERY */
 
@@ -163,13 +168,15 @@ nav ul li:hover {
 
 
 #discover_japan {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
 }
 
 /* PROFILE PAGE */
 
 #username_profile {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-shadow: 1 1 1 2px black;
      font-style: normal; 
 }
@@ -223,7 +230,7 @@ nav ul li:hover {
 .recipe-container {
     height: 400px;
     opacity: 0.9;
-    font-family: 'Open-sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
@@ -234,7 +241,7 @@ nav ul li:hover {
 }
 
 .title-card {
-    font-family: 'Open-sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     
 }
 
@@ -244,7 +251,8 @@ nav ul li:hover {
 
 
 .book-title {
-    font-family: 'Open-sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
     font-size: 15px;
     
 }
@@ -256,4 +264,11 @@ nav ul li:hover {
   max-width: 50%;
   height: 90%;
 
+}
+
+.price {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    margin: 20 20 20 20px;
+    padding-left: 30px;
 }

@@ -13,6 +13,8 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fredoka+One&family=Inconsolata:wght@300;600;700&family=Lato:wght@300&family=Open+Sans:wght@300&display=swap"
 		rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Montserrat:wght@200;400;500;800;900&family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
@@ -28,7 +30,7 @@
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger right pulse"><i class="fas fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down black-text" id="navbar">
 					<li><a href="{{ url_for('get_recipes') }}">HOME</a></li>
-                   
+                   <li><a class="red accent-2 waves-effect waves-light" href="{{ url_for('shop') }}">Shop <i class="fas fa-shopping-cart fa-sm white-text"></i></a></li>
                     {% if session.user %}
 					   <li><a href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
 					 <li><a href="#">ADD RECIPE</a></li>
@@ -36,7 +38,7 @@
                     {% else %}
 					 <li><a  href="{{ url_for('login') }}">LOG IN</a></li>
 					 <li><a href="{{ url_for('register') }}">REGISTER</a></li>
-                     <li><a class="red accent-2 waves-effect waves-light" href="{{ url_for('shop') }}">Shop <i class="fas fa-shopping-cart fa-sm white-text"></i></a></li>
+                     
                     {% endif %}
 				</ul>
 			</div>
@@ -46,7 +48,7 @@
 		<ul class="sidenav black-text" id="mobile-demo">
             
            <li><a href="{{ url_for('get_recipes') }}">HOME</a></li>
-           
+           <li><a class="red accent-2 waves-effect waves-light white-text" href="{{ url_for('shop') }}">Shop</a></li>
             {% if session.user %}
 				<li><a href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
 				<li><a href="#">ADD RECIPE</a></li>
@@ -54,7 +56,7 @@
             {% else %}
 				<li><a href="{{ url_for('login') }}">LOG IN</a></li>
 				<li><a href="{{ url_for('register') }}">REGISTER</a></li>
-                <li><a class="red accent-2 waves-effect waves-light white-text" href="#">Shop</a></li>
+                
                 
             {% endif %}
 		</ul>

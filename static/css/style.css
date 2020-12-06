@@ -109,7 +109,7 @@ nav ul li:hover {
 /* row flashes */
 
 #row_flashes {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Fredoka One', cursive;
     margin-top: 20px;
     text-shadow: 1 1 1 2px black;
 }
@@ -133,15 +133,32 @@ nav ul li:hover {
 
 
 
+
 /* EMBED VIDEO */
 
 
 
-iframe {
-   display: block;
-   margin: 0 auto;
+
 }
+    @media (max-width: 950px)
+        { 
+    .video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:40px;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+            }
+
 /* HOME GALLERY */
+
 
 
 

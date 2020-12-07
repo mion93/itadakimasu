@@ -108,7 +108,20 @@ nav ul li:hover {
     padding: 10 10 10 10px;
 }
 
+/* LOGIN PAGE */
 
+.login-sign-form-container {
+    background-image: url('https://images.unsplash.com/photo-1562436260-8c9216eeb703?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=939&q=80');
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    
+    
+
+}
 
 /* row flashes */
 

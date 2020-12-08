@@ -11,15 +11,15 @@
     <!--- Main Page Title-->
     
     <h4 class="center" style="font-family: 'Montserrat', sans-serif;">
-       Submit <span class="red-text"> Recipe</span> 
+       Submit <span class="red-text"> Your Recipe</span> 
        <hr></h4>
 	
 		
-<div class="row card-panel s12  m8 offset-m2 grey lighten-5">
-        <form class="col s12" method="POST" action="">
+<div class="row card-panel col 12 m8 grey lighten-5 add-recipe-form" style="max-width: 100%;">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
         <!-- Recipe Name-->
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s12 ">
                     <i class="fas fa-folder prefix black-text darken-4"></i>
                     <input id="recipe_name" name="recipe_name" minlength="5" maxlength="30"
                         type="text" class="validate" required>
@@ -46,7 +46,7 @@
 
             <!-- Ingredients-->
 			<div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s12 ">
 					<i class="fas fa-list prefix black-text "></i>
                     <input id="ingredients" name="ingredients" type="text" class=" validate" required>
                     <label for="ingredients">Ingredients</label>
@@ -58,7 +58,7 @@
 
 
             <div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s12 ">
 					<i class="fas fa-book-open prefix black-text "></i>
                     <input id="method" name="method" type="text" class=" validate" required>
                     <label for="method">Method</label>
@@ -69,10 +69,21 @@
 
             <!-- Image URL -->
             <div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s12 m8 offset-m2">
 					<i class="fas fa-image prefix black-text text-darken-4"></i>
                     <input id="image_url" name="image_url" type="text" class=" validate" required>
                     <label for="image_url">Image URL</label>
+						
+				
+				</div>
+			</div>
+
+            <!-- SUBMIT BUTTON-->
+            <div class="row">
+				<div class="input-field col s12">
+					<button class="btn waves-effect waves-light red accent-2" type="submit" >Submit
+                           <i class="fas fa-paper-plane fa-xs right"></i>
+                 </button>
 						
 				
 				</div>

@@ -311,3 +311,12 @@ nav ul li:hover {
 #myBtn:hover {
   background-color: black; /* Add a dark-grey background on hover */
 }
+
+
+
+/* ------------------------------------ ADD RECIPE */
+
+.recipe-form {
+   
+ overflow: hidden;
+}

@@ -51,7 +51,7 @@
            <li><a class="red accent-2 waves-effect waves-light white-text" href="{{ url_for('shop') }}">Shop</a></li>
             {% if session.user %}
 				<li><a href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
-				<li><a href="{{ url_for('logout') }}">ADD RECIPE</a></li>
+				<li><a href="{{ url_for('add_recipe') }}">ADD RECIPE</a></li>
 				<li><a href="{{ url_for('logout') }}">LOG OUT</a></li>
             {% else %}
 				<li><a href="{{ url_for('login') }}">LOG IN</a></li>

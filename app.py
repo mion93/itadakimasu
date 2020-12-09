@@ -106,9 +106,24 @@ def shop():
 
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    if request.method == "POST":
+        recipe = {
+            "recipe_name": request.form.get("recipe_name"),
+            "category_name": request.form.get("category_name"),
+            "prep_time": request.form.get("prep_time"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "image_url": request.form.get("image_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+
+    flash("Recipe Successfully Added")
     return render_template("add_recipe.html")
+    
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

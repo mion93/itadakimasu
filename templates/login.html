@@ -18,7 +18,7 @@
 	
 		<div class="row">
 			<form class="col s12 m8 offset-m2 login-sign-form-container " method="POST" action="{{ url_for('login') }}" >
-				<div class="card-panel center-align grey lighten-5" id="formregister">
+				<div class="card-panel center-align grey lighten-5" id="formlogin">
                 <h4 class="center-align black-text" id="register-header">Log In</h4>
 					<!-- username -->
 					<div class="row">
@@ -44,12 +44,7 @@
 					</div>
 				</div>
 	<!-- register -->
-                <div class="row">
-                <div class="col s12">
-                <p class="center-align">New?<a href="{{ url_for('register') }}" class="red-text"> Register Account</a></p>
-                </div>
-                </div>
-
+               
 
 
                 
@@ -57,7 +52,11 @@
 			</form>
 		</div>
 	
-	
+	<div class="row">
+                    <div class="col s12">
+                             <p class="center-align">New?<a href="{{ url_for('register') }}" class="red-text"> Register Account</a></p>
+                      </div>
+                </div>
 	
 		
 	</main>

@@ -50,8 +50,10 @@
 						<span><h6 class="title-card"><b>{{ recipe.recipe_name }}</b></h6></span>
 						<span> <i class="fas fa-list-ul"></i> CATEGORY: {{ recipe.category_name}}</span><br>
 						<span> <i class="fas fa-clock"></i>   TIME: {{ recipe.prep_time }}</span><br></div>
-						<div class="card-action">
-							<a href="" class="red accent-2 btn-small waves-light waves-effect">Show Recipe</a></div>
+						
+                        <div class="card-action">
+                        
+                        <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="red accent-2 btn-small waves-light waves-effect">Show</a></div>
 					</div>
 				</div>
 		

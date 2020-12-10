@@ -105,6 +105,7 @@ def shop():
     return render_template("shop.html")
 
 
+# ADD RECIPE
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
@@ -119,11 +120,47 @@ def add_recipe():
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return redirect(url_for("add_recipe"))
 
-    flash("Recipe Successfully Added")
-    return render_template("add_recipe.html")
-    
-    
+    return render_template("add_recipe.html")    
+
+
+
+
+@app.route("/view_recipe/<recipe_id>", methods=["GET"])
+def view_recipe(recipe_id):
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("view_recipe.html", recipe=recipe)
+
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    if request.method == "POST":
+        submit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "category_name": request.form.get("category_name"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "image_url": request.form.get("image_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        return redirect(url_for("get_recipes"))
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("edit_recipe.html", recipe=recipe)
+
+
+# Delete recipe function
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    """Find recipe by id and remove from the db"""
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    return redirect(url_for("get_recipes"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

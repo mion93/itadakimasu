@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<main>
+
+    
+    
+    <h4 class="center" style="font-family: 'Montserrat', sans-serif;">
+       Edit<span class="red-text"> Your Recipe</span> 
+       <hr>
+    </h4>
+	
+<div class="container add-recipe">
+<div class="row card-panel grey lighten-5">
+        <form class=" col s12 " method="POST"
+         action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+       
+            
+                <div class="input-field col s12">
+                    <i class="fas fa-folder prefix black-text darken-4"></i>
+                    <textarea id="recipe_name" name="recipe_name" minlength="5" maxlength="30"
+                        type="text" class="materialize-textarea validate"  required> {{ recipe.recipe_name}} </textarea>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            
+             
+            
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix black-text text-darken-4"></i>
+                    <textarea id="category_name" name="category_name" minlength="3"
+                        maxlength="10" class="materialize-textarea validate"  required>{{ recipe.category_name }}</textarea>
+                    <label for="category_name">Category Name</label>
+                </div>
+            
+           
+            
+                <div class="input-field col s12">
+                    <i class="fas fa-clock prefix black-text "></i>
+                    <textarea id="prep_time" name="prep_time" type="text" class="materialize-textarea validate" required>{{ recipe.prep_time }}</textarea>
+                    <label for="prep_time">Prep & Cook Time</label>
+                </div>
+            
+
+           
+			
+				<div class="input-field col s12">
+					<i class="fas fa-list prefix black-text "></i>
+                    <textarea id="ingredients" name="ingredients" type="text" class="materialize-textarea validate" required>{{ recipe.ingredients }}</textarea>
+                    <label for="ingredients">Ingredients</label>
+						
+				
+				</div>
+			
+
+
+				<div class="input-field col s16">
+					<i class="fas fa-book-open prefix black-text "></i>
+                    <textarea id="method" name="method" type="text" class="materialize-textarea validate" required>{{ recipe.method }}</textarea>
+                    <label for="method">Method</label>
+						
+				
+				</div>
+			
+
+            
+				<div class="input-field col s16">
+					<i class="fas fa-image prefix black-text text-darken-4"></i>
+                    <textarea id="image_url" name="image_url" type="text" class="materialize-textarea validate" value="recipe.image_url" required>{{ recipe.image_url }}</textarea>
+                    <label for="image_url"></label>
+						
+				
+				</div>
+			
+
+            <div class="row">
+				<div class="input-field col s12">
+					<button class="btn waves-effect waves-light red accent-2" type="submit" >Edit
+                           <i class="fas fa-edit fa-xs right"></i>
+                 </button>
+						<button href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn waves-effect waves-light red accent-2" type="submit" >Delete
+                           <i class="fas fa-trash-alt fa-xs right"></i>
+                 </button>
+                 
+				</div>
+                
+			</div>
+        </form>
+    </div>
+
+</div>
+	</main>
+ 
+
+{% endblock %}
+!>

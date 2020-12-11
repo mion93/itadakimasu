@@ -34,7 +34,7 @@
                     {% if session.user %}
 					   <li><a href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
 					 <li><a href="{{ url_for('add_recipe') }}">ADD RECIPE</a></li>
-                     <li><a href="">EDIT </a></li>
+                     
 					 <li><a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt" title="EXIT"></i></a></li>
                     {% else %}
 					 <li><a  href="{{ url_for('login') }}">LOG IN</a></li>
@@ -53,7 +53,7 @@
             {% if session.user %}
 				<li><a href="{{ url_for('profile', username=session['user']) }}">PROFILE</a></li>
 				<li><a href="{{ url_for('add_recipe') }}">ADD</a></li>
-                <li><a href="">EDIT </a></li>
+                
 				<li><a href="{{ url_for('logout') }}">LOG OUT</a></li>
             {% else %}
 				<li><a href="{{ url_for('login') }}">LOG IN</a></li>

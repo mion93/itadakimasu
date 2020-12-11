@@ -2,7 +2,7 @@
 {% block content %}
 
 
-  <!-- Section: Slider -->
+  <!-- Section: HERO Slider -->
   <section class="slider s12 m12">
     <ul class="slides">
       <li>
@@ -13,14 +13,16 @@
           <h2 class="black-text" id="discover_japan">Discover <span class="red-text">Japanese </span>Recipes</h2>
           <h5 class="light black-text text-lighten-3 hide-on-small-only">"Japanese food makes me feel particularly good."</h5>
           <p class="black-text"> - David Mitchell </p>
-         <!-- searchbar -->
+         <!-- SEARCH BAR -->
   <nav>
     <div class="nav-wrapper" id="searchbar">
       <form>
         <div class="input-field white">
-          <input id="search" type="search" placeholder="Search recipe.." required>
-          <label class="label-icon" for="search" placeholder="Search recipe.."><i class="fas fa-search red-text"></i></label>
+        <form action="{{ url_for('search') }}" method="POST">
+          <input id="query" name="query" type="text" placeholder="Search recipe.." required>
+          <label class="label-icon" for="query" placeholder="Search recipe.."><i type="submit" class="fas fa-search red-text"></i></label>
           <i class="fas fa close"></i>
+        </form>
         </div>
       </form>
     </div>
@@ -32,7 +34,7 @@
      
     </ul>
   </section>
-<!--cards recipes-->
+<!--CARDS RECIPE DISPLAYING CATEGORY AND TIME-->
 <h4 class="center" style="font-family: 'Montserrat', sans-serif;">
        Featured <span class="red-text"> Recipes</span> 
        <hr></h4>
@@ -52,8 +54,16 @@
 						<span> <i class="fas fa-clock"></i>   TIME: {{ recipe.prep_time }}</span><br></div>
 						
                         <div class="card-action">
-                        
+                        <div class="row">
                         <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="red accent-2 btn-small waves-light waves-effect">Show</a></div>
+                        {% if session.user|lower == recipe.created_by|lower %}
+                         <div class="row">
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="red accent-2 btn-small waves-light waves-effect">Edit</a>
+                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="fas fa-trash-alt red accent-2 btn-small waves-light waves-effect"></a>
+                        
+                           </div>
+                        {% endif %}
+                        </div>
 					</div>
 				</div>
 		
@@ -66,7 +76,7 @@
 		</div>
 
 
-<!--Embed Video-->
+<!--Responsive Embed Video-->
 <section>
 <div class="container">
   
@@ -75,7 +85,7 @@
        </div> 
     
 </div>
-<!--Article-->
+<!--ARTICLE1-->
 
 <h4 class="center" style="font-family: 'Montserrat', sans-serif;" >
        Food <span class="red-text"> Articles</span> 
@@ -95,7 +105,7 @@
         </div>
 
 
-
+<!--ARTICLE 2-->
         <div class="col s12 ">
           <div class="card small black" style="max-width: 100%;">
               <div class="card-content white-text" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" id="article2">
@@ -146,6 +156,8 @@
       <hr>
     </div>
   </section>
+
+  <!--GO TO TOP BUTTON-->
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 <!--parallax-->
   <section>

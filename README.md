@@ -54,3 +54,18 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 ## CREDITS
 
+* MATERIALIZE FRAMEWORK
+- ( Navbar, buttons, parallax, sliders, cards, forms, responsiveness)
+
+* Stack Overflow
+- Used for fixing responsiveness bugs.
+
+* Unspleash
+- Used for no copyright images
+
+* Amazon
+- Used for images and URL of the books
+
+* Articles:
+[Culture Trip](https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/)
+[BBC FOOD](https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese)

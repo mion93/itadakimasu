@@ -70,7 +70,8 @@
                     <label for="image_url"></label>
 						
 				
-				</div>
+                </div>
+                <!-- If session user is logged in, is allowed to see edit and delete functionality from his own recipe-->
 			   {% if recipe.created_by == session.user %}
                   <div class="row">
 				      <div class="input-field col s12">

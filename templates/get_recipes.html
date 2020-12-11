@@ -56,6 +56,7 @@
                         <div class="card-action">
                         <div class="row">
                         <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="red accent-2 btn-small waves-light waves-effect">Show</a></div>
+                       <!-- If session user is logged in, is allowed to see edit and delete functionality from his own recipe-->
                         {% if session.user|lower == recipe.created_by|lower %}
                          <div class="row">
                             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="red accent-2 btn-small waves-light waves-effect">Edit</a>
@@ -85,7 +86,7 @@
        </div> 
     
 </div>
-<!--ARTICLE1-->
+<!--CARD ARTICLE THAT OPENS A LINK IN A NEW TAB--->
 
 <h4 class="center" style="font-family: 'Montserrat', sans-serif;" >
        Food <span class="red-text"> Articles</span> 
@@ -94,7 +95,7 @@
       <div class="col s12 " style="max-width: 100%;">
           <div class="card small red accent-2">
               <div class="card-content black-text" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" id="article1">
-                  <span class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" ><a href="https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/" style="text-decoration: none; color: black;">The 10 Best Traditional Japanese Foods and Dishes</a></span>
+                  <span class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" ><a target="_blank" href="https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/" style="text-decoration: none; color: black;">The 10 Best Traditional Japanese Foods and Dishes</a></span>
                   <blockquote> by Christine Bagarino, The Culture Trip </blockquote>
                   <p>If you’re looking to expand your knowledge of Japanese food, here are ten of the best traditional Japanese dishes.</p>
                 </div>
@@ -105,11 +106,12 @@
         </div>
 
 
-<!--ARTICLE 2-->
+
+<!--CARD ARTICLE THAT OPENS A LINK IN A NEW TAB--->
         <div class="col s12 ">
           <div class="card small black" style="max-width: 100%;">
               <div class="card-content white-text" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" id="article2">
-                  <span class="card-title " style="font-family: 'Montserrat', sans-serif; font-weight: 800;" ><a href="https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/" style="text-decoration: none; color: white;">Should We Eat More Like The Japanese?</a></span>
+                  <span class="card-title " style="font-family: 'Montserrat', sans-serif; font-weight: 800;" ><a href="https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese" target="_blank" style="text-decoration: none; color: white;">Should We Eat More Like The Japanese?</a></span>
                   <blockquote> by Veronique Greenwood, BBC </blockquote>
                   <p> The Japanese have one of the highest life expectancies in the world. </p>
                 </div>
@@ -120,7 +122,7 @@
         </div>
     </div>
  </section>   
-<!--Gallery -->
+<!--  Gallery -->
     <section id="gallery" class="section section-gallery scrollspy">
     
     <div class="container">
@@ -159,6 +161,7 @@
 
   <!--GO TO TOP BUTTON-->
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+  
 <!--parallax-->
   <section>
   <div class="parallax-container" style="max-height: 200px;">

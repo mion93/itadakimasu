@@ -39,6 +39,7 @@
 
 
 <div class="row">
+    <!-- If session user is logged in, is allowed to see edit and delete functionality from his own recipe-->
     {% if recipe.created_by == session.user %}
     <div class="col s12">
         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect waves-light white-text btn red accent-2">Edit</a>

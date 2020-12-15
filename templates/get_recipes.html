@@ -2,18 +2,20 @@
 {% block content %}
 
 
-  <!-- Section: HERO Slider -->
-  <section class="slider s12 m12">
+<!-- Section: HERO Slider -->
+<section class="slider s12 m12">
     <ul class="slides">
-      <li>
-        <img src="https://images.unsplash.com/photo-1516941392435-e677906765c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" style="
+        <li>
+            <img src="https://images.unsplash.com/photo-1516941392435-e677906765c8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                style="
   background-repeat: no-repeat;
-  background-size: cover;" alt="">
-        <div class="caption center-align">
-          <h2 class="black-text" id="discover_japan">Discover <span class="red-text">Japanese </span>Recipes</h2>
-          <h5 class="light black-text text-lighten-3 hide-on-small-only">"Japanese food makes me feel particularly good."</h5>
-          <p class="black-text"> - David Mitchell </p>
-         <!-- SEARCH BAR -->
+  background-size: cover;" alt="sushi">
+            <div class="caption center-align">
+                <h2 class="black-text" id="discover_japan">Discover <span class="red-text">Japanese </span>Recipes</h2>
+                <h5 class="light black-text text-lighten-3 hide-on-small-only">"Japanese food makes me feel particularly
+                    good."</h5>
+                <p class="black-text"> - David Mitchell </p>
+                <!-- SEARCH BAR --
   <nav>
     <div class="nav-wrapper" id="searchbar">
       <form>
@@ -27,147 +29,207 @@
       </form>
     </div>
   </nav>
-      
-        </div>
-      </li>
-    
-     
-    </ul>
-  </section>
-<!--CARDS RECIPE DISPLAYING CATEGORY AND TIME-->
-<h4 class="center" style="font-family: 'Montserrat', sans-serif;">
-       Featured <span class="red-text"> Recipes</span> 
-       <hr></h4>
-<div class="recipe-container card-container">
-	<div class="row center-align">
 
-	{% for recipe in recipes %}
+  -- SEARCH DIV-->
+                <div class=" card-panel col-xs-12 col-md-4 col-sm-12">
+                    <form action="{{ url_for('search') }}" method="post" class="col s12">
+                        <div class="row valign-wrapper center-align">
+                            <div class="input-field col s12 black-text">
+                                <input type="text" name="query" id="query" class="validate">
+                                <label for="query" class="red-text">Search Recipes</label>
+                            </div>
+                            <div class="col s12 m4">
 
+                                <button type="submit" class="btn red accent-2 waves-effect waves-light"><i
+                                        class="fas fa-search"></i>
 
-		<div class="col s12 m3" style="max-width: 100%;">
-			<div class="card small recipe-card">
-				<div class="card-image">
-					<img src="{{ recipe.image_url }}" class="responsive-img"></div>
-					<div class="card-content">
-						<span><h6 class="title-card"><b>{{ recipe.recipe_name }}</b></h6></span>
-						<span> <i class="fas fa-list-ul"></i> CATEGORY: {{ recipe.category_name}}</span><br>
-						<span> <i class="fas fa-clock"></i>   TIME: {{ recipe.prep_time }}</span><br></div>
-						
-                        <div class="card-action">
-                        <div class="row">
-                        <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="red accent-2 btn-small waves-light waves-effect">Show</a></div>
-                       <!-- If session user is logged in, is allowed to see edit and delete functionality from his own recipe-->
-                        {% if session.user|lower == recipe.created_by|lower %}
-                         <div class="row">
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="red accent-2 btn-small waves-light waves-effect">Edit</a>
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="fas fa-trash-alt red accent-2 btn-small waves-light waves-effect"></a>
-                        
-                           </div>
-                        {% endif %}
+                                </button>
+                                <a href="{{ url_for('get_recipes') }}"
+                                    class="btn red accent-2 waves-effect waves-light"><i
+                                        class="fas fa-window-close"></i></a>
+                            </div>
                         </div>
-					</div>
-				</div>
-		
+                    </form>
+                </div>
 
-				
-		
-            
-    {% endfor %}
-	</div>
-		</div>
+
+            </div>
+        </li>
+
+
+    </ul>
+</section>
+<!--CARDS RECIPE DISPLAYING CATEGORY AND TIME-->
+    <h4 class="center" style="font-family: 'Montserrat', sans-serif;">
+    Featured <span class="red-text"> Recipes</span>
+    <hr>
+      </h4>
+
+  <div class="recipe-container card-container">
+        <div class="row center-align">
+<!-- Check results from search bar, if no skip to else statement -->
+    {% if recipes|length > 0 %}
+    <!-- Card Recipe Displaying-->
+        {% for recipe in recipes %}
+
+
+           <div class="col s12 m3" style="max-width: 100%;">
+                <div class="card small recipe-card">
+                       <div class="card-image">
+                           <img src="{{ recipe.image_url }}" class="responsive-img">
+                      </div>
+                     <div class="card-content">
+                          <span>
+                          <h6 class="title-card"><b>{{ recipe.recipe_name }}</b></h6>
+                         </span>
+                          <span> <i class="fas fa-list-ul"></i> CATEGORY: {{ recipe.category_name}}</span><br>
+                         <span> <i class="fas fa-clock"></i> TIME: {{ recipe.prep_time }}</span><br>
+                        </div>
+
+                      <div class="card-action">
+                         <div class="row">
+                             <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}"
+                               class="red accent-2 btn-small waves-light waves-effect">Show</a>
+                            </div>
+                                  <!-- If session user is logged in, is allowed to see edit and delete functionality from his own recipe-->
+                          {% if session.user|lower == recipe.created_by|lower %}
+                              <div class="row">
+                                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                  class="red accent-2 btn-small waves-light waves-effect">Edit
+                                    </a>
+                                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                                             class="fas fa-trash-alt red accent-2 btn-small waves-light waves-effect">
+                                       </a>
+
+                              </div>
+                         {% endif %}
+                      </div>
+                </div>
+          </div>
+        {% endfor %}
+    {% else %}
+        <h3 class="text-darken-4 center-align"> No results for this search</h3>
+    {% endif %}
+    </div>
+</div>
 
 
 <!--Responsive Embed Video-->
 <section>
-<div class="container">
-  
-      <div class="video-container" style="margin-top: 10px;" >
-          <iframe width="900" height="400" src="https://www.youtube.com/embed/UF4jVfU4PkA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       </div> 
-    
-</div>
-<!--CARD ARTICLE THAT OPENS A LINK IN A NEW TAB--->
-
-<h4 class="center" style="font-family: 'Montserrat', sans-serif;" >
-       Food <span class="red-text"> Articles</span> 
-       <hr></h4>
- <div class="row article">
-      <div class="col s12 " style="max-width: 100%;">
-          <div class="card small red accent-2">
-              <div class="card-content black-text" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" id="article1">
-                  <span class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" ><a target="_blank" href="https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/" style="text-decoration: none; color: black;">The 10 Best Traditional Japanese Foods and Dishes</a></span>
-                  <blockquote> by Christine Bagarino, The Culture Trip </blockquote>
-                  <p>If you’re looking to expand your knowledge of Japanese food, here are ten of the best traditional Japanese dishes.</p>
-                </div>
-              <div class="card-action white">
-                  <a href="https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/" target="_blank" class="white-text btn red accent-2">READ </a>
-               </div>
-           </div>
-        </div>
-
-
-
-<!--CARD ARTICLE THAT OPENS A LINK IN A NEW TAB--->
-        <div class="col s12 ">
-          <div class="card small black" style="max-width: 100%;">
-              <div class="card-content white-text" style="font-family: 'Montserrat', sans-serif; font-weight: 800;" id="article2">
-                  <span class="card-title " style="font-family: 'Montserrat', sans-serif; font-weight: 800;" ><a href="https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese" target="_blank" style="text-decoration: none; color: white;">Should We Eat More Like The Japanese?</a></span>
-                  <blockquote> by Veronique Greenwood, BBC </blockquote>
-                  <p> The Japanese have one of the highest life expectancies in the world. </p>
-                </div>
-              <div class="card-action white">
-                  <a href="https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese" target="_blank" class="white-text btn red accent-2">READ</a>
-               </div>
-           </div>
-        </div>
-    </div>
- </section>   
-<!--  Gallery -->
-    <section id="gallery" class="section section-gallery scrollspy">
-    
     <div class="container">
-      <h4 class="center" style="font-family: 'Montserrat', sans-serif;">
-       Pictures From <span class="red-text"> Japan </span> 
-       <hr>
-      </h4>
-      
-    
-      
-      <div class="row" >
-      <div class="card">
-        <div class="col s12 m3">
-          <img class="materialboxed responsive-img" src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80" style="max-width: 100%;" alt="tokyo">
-        </div>
-        </div>
-        
-        <div class="card">
-        <div class="col s12 m3">
-          <img class="materialboxed responsive-img" src="https://images.unsplash.com/photo-1516684808441-d7ca9141e63c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80" alt="tokyo3" style="max-width: 100%;">
-        </div>
-        </div>
-        <div class="col s12 m3">
-          <img class="materialboxed responsive-img" src="https://images.unsplash.com/photo-1561503972-839d0c56de17?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" style="max-width: 100%;" alt="tokyo2">
-        </div>
-        <div class="card">
-        <div class="col s12 m3">
-          <img class="materialboxed responsive-img" src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80" alt="tokyo4" style="max-width: 100%;">
-        </div>
-        </div>
-      </div>
 
-      <hr>
+        <div class="video-container" style="margin-top: 10px;">
+            <iframe width="900" height="400" src="https://www.youtube.com/embed/UF4jVfU4PkA" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+
     </div>
-  </section>
+    <!--CARD ARTICLE THAT OPENS A LINK IN A NEW TAB--->
 
-  <!--GO TO TOP BUTTON-->
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <h4 class="center" style="font-family: 'Montserrat', sans-serif;">
+        Food <span class="red-text"> Articles</span>
+        <hr>
+    </h4>
+    <div class="row article">
+        <div class="col s12 " style="max-width: 100%;">
+            <div class="card small red accent-2">
+                <div class="card-content black-text" style="font-family: 'Montserrat', sans-serif; font-weight: 800;"
+                    id="article1">
+                    <span class="card-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800;"><a
+                            target="_blank"
+                            href="https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/"
+                            style="text-decoration: none; color: black;">The 10 Best Traditional Japanese Foods and
+                            Dishes</a></span>
+                    <blockquote> by Christine Bagarino, The Culture Trip </blockquote>
+                    <p>If you’re looking to expand your knowledge of Japanese food, here are ten of the best traditional
+                        Japanese dishes.</p>
+                </div>
+                <div class="card-action white">
+                    <a href="https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/"
+                        target="_blank" class="white-text btn red accent-2">READ </a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--CARD ARTICLE THAT OPENS A LINK IN A NEW TAB--->
+        <div class="col s12 ">
+            <div class="card small black" style="max-width: 100%;">
+                <div class="card-content white-text" style="font-family: 'Montserrat', sans-serif; font-weight: 800;"
+                    id="article2">
+                    <span class="card-title " style="font-family: 'Montserrat', sans-serif; font-weight: 800;"><a
+                            href="https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese"
+                            target="_blank" style="text-decoration: none; color: white;">Should We Eat More Like The
+                            Japanese?</a></span>
+                    <blockquote> by Veronique Greenwood, BBC </blockquote>
+                    <p> The Japanese have one of the highest life expectancies in the world. </p>
+                </div>
+                <div class="card-action white">
+                    <a href="https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese"
+                        target="_blank" class="white-text btn red accent-2">READ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  Gallery -->
+<section id="gallery" class="section section-gallery scrollspy">
+
+    <div class="container">
+        <h4 class="center" style="font-family: 'Montserrat', sans-serif;">
+            Pictures From <span class="red-text"> Japan </span>
+            <hr>
+        </h4>
+
+
+
+        <div class="row">
+            <div class="card">
+                <div class="col s12 m3">
+                    <img class="materialboxed responsive-img"
+                        src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
+                        style="max-width: 100%;" alt="tokyo">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="col s12 m3">
+                    <img class="materialboxed responsive-img"
+                        src="https://images.unsplash.com/photo-1516684808441-d7ca9141e63c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
+                        alt="tokyo3" style="max-width: 100%;">
+                </div>
+            </div>
+            <div class="col s12 m3">
+                <img class="materialboxed responsive-img"
+                    src="https://images.unsplash.com/photo-1561503972-839d0c56de17?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                    style="max-width: 100%;" alt="tokyo2">
+            </div>
+            <div class="card">
+                <div class="col s12 m3">
+                    <img class="materialboxed responsive-img"
+                        src="https://images.unsplash.com/photo-1505069446780-4ef442b5207f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80"
+                        alt="tokyo4" style="max-width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+    </div>
+</section>
+
+<!--GO TO TOP BUTTON-->
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
 <!--parallax-->
-  <section>
-  <div class="parallax-container" style="max-height: 200px;">
-      <div class="parallax"><img src="https://images.unsplash.com/photo-1519077204685-ed90d0cc05b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80"></div>
+<section>
+    <div class="parallax-container" style="max-height: 200px;">
+        <div class="parallax"><img
+                src="https://images.unsplash.com/photo-1519077204685-ed90d0cc05b7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80">
+        </div>
     </div>
 
-  </section>
+</section>
 
 {% endblock %}

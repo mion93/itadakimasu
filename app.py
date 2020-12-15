@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
-
+# Get recipes
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
@@ -25,7 +25,7 @@ def get_recipes():
     return render_template("get_recipes.html", recipes=recipes)
     
 
-
+# Register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -49,7 +49,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
-
+# Log In
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -77,7 +77,7 @@ def login():
 
     return render_template("login.html")
 
-
+# Profile Page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -89,7 +89,7 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-
+# Log Out function
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -105,7 +105,7 @@ def shop():
     return render_template("shop.html")
 
 
-# ADD RECIPE
+# Add recipe
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
@@ -127,7 +127,7 @@ def add_recipe():
 
 
 
-
+# View Recipe
 @app.route("/view_recipe/<recipe_id>", methods=["GET"])
 def view_recipe(recipe_id):
 
@@ -135,7 +135,7 @@ def view_recipe(recipe_id):
     return render_template("view_recipe.html", recipe=recipe)
 
 
-
+# Edit Recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -154,23 +154,21 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe)
 
 
-# Delete recipe function
+# Delete Recipe Function
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    """Find recipe by id and remove from the db"""
+    """Find recipe and remove from the db"""
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     return redirect(url_for("get_recipes"))
 
 
+# Search bar function
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    """
-    Performs text index search on the recipes
-    collection using the query variable.
-    """
+   
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("get_recipes.html", recipes=recipes)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

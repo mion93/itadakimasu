@@ -14,6 +14,8 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 ### DESIGN
 
+#### COLORS
+![Palette] (/static/images/palette1.png)
 
 
 
@@ -35,15 +37,15 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 * [MATERIALIZECSS](http://materializecss.com/)
 * [JQUERY](https://en.wikipedia.org/wiki/JQuery)
-* [FLASK] 
-* [WERKZEUG]
-* [MONGODB] 
-* [HEROKU]
-* [GITHUB]
-* [GOOGLE-FONTS]
-* [FONT-AWESOME]
-* [FAVICON]
-* [GIT]
+* [FLASK] (https://en.wikipedia.org/wiki/Flask_(web_framework))
+* [WERKZEUG](https://werkzeug.palletsprojects.com/en/1.0.x/)
+* [MONGODB] (https://en.wikipedia.org/wiki/MongoDB)
+* [HEROKU] (https://en.wikipedia.org/wiki/Heroku)
+* [GITHUB] (https://en.wikipedia.org/wiki/GitHub)
+* [GOOGLE-FONTS] (https://fonts.google.com/)
+* [FONT-AWESOME] (https://fontawesome.com/)
+* [FAVICON] (http://faviconer.com/)
+* [GIT] (https://en.wikipedia.org/wiki/Git)
 
 ## TESTING 
 

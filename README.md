@@ -1,6 +1,6 @@
 # ITADAKIMASU - SHARE YOUR JAPANESE RECIPE
 
-[MockUp](/static/images/mockup.PNG)
+![MockUp](/static/images/mockup.PNG)
 
 [ITADAKIMASU](https://itadakimasu-ms3.herokuapp.com/)
 ## UX

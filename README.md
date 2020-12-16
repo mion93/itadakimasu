@@ -18,6 +18,13 @@ This website can be used not only by beginners who wants to be inspired and disc
 ![Palette](/static/images/palette1.png)
 
 
+#### LOGO
+![ITADAKIMASU](/static/images/LOGO.png)
+* ITADAKIMASU in Japanese means 'I humbly receive' or can be interpreted by "Let's enjoy our food'. This word shows gratefulness for the meal by Japanese culture.
+* The Red Dot represent the Japanese flag, so I decided to use it to have a connection with Japan.
+![JAPAN FLAG](/static/images/Japan-flag-wallpaper-12.gif)
+![ITADAKIMASU](/static/images/LOGO.png)
+
 
 ### WIREFRAMES 
 
@@ -37,7 +44,7 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 * [MATERIALIZECSS](http://materializecss.com/)
 * [JQUERY](https://en.wikipedia.org/wiki/JQuery)
-* [FLASK] (https://en.wikipedia.org/wiki/Flask_(web_framework))
+* [FLASK](https://en.wikipedia.org/wiki/Flask_(web_framework))
 * [WERKZEUG](https://werkzeug.palletsprojects.com/en/1.0.x/)
 * [MONGODB](https://en.wikipedia.org/wiki/MongoDB)
 * [HEROKU](https://en.wikipedia.org/wiki/Heroku)

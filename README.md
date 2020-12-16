@@ -1,7 +1,8 @@
 # ITADAKIMASU - SHARE YOUR JAPANESE RECIPE
 
+[MockUp](/static/images/mockup.PNG)
 
-
+[ITADAKIMASU](https://itadakimasu-ms3.herokuapp.com/)
 ## UX
 
 ### GOAL 
@@ -58,6 +59,7 @@ This website can be used not only by beginners who wants to be inspired and disc
 * [HEROKU](https://en.wikipedia.org/wiki/Heroku)
 App for project deployment
 * [GITHUB](https://en.wikipedia.org/wiki/GitHub)
+ Used to store the project from Git 
 * [GOOGLE-FONTS](https://fonts.google.com/)
  To import Montserrat and Roboto 
 * [FONT-AWESOME](https://fontawesome.com/)
@@ -72,13 +74,13 @@ To create website icon
 * HTML
 
 * CSS
-W3CValidator CSS I recieved no errors with my CSS file.
+W3CValidator CSS
 
 * Javascript
-JShint - No errors.
+JShint - 
 
 * Python
-Pep8 - 
+Pep8 -
 
 ## DEPLOYMENT 
 
@@ -101,7 +103,14 @@ Using automatic deployment from GITPOD to HEROKU:
 - On Deploy App section in Heroku click on "Enable Automatic Deploys" and then "Deploy Branch", once done a message will show: "Your app was successfully deployed"
 - View deployed project by clicking on "View" to launch the app.
 
+### Local Clone
 
+* Log in to GitHub account and find the repository.
+* Clone the repository by clicking and copying the link from "Clone with HTTPS".
+* Find and choose which location needs to be used for local clone.
+* In Git Bash paste the URL copied in to GitHub repository and press enter to create the local clone:
+-  - ***git clone git@github.com:mion93/itadakimasu.git***
+* Create a new ***.env*** file for  environment variables.
 
 
 

@@ -69,8 +69,40 @@ To create website icon
 
 ## TESTING 
 
+* HTML
+
+* CSS
+W3CValidator CSS I recieved no errors with my CSS file.
+
+* Javascript
+JShint - No errors.
+
+* Python
+Pep8 - 
 
 ## DEPLOYMENT 
+
+### Heroku deployment
+
+Using automatic deployment from GITPOD to HEROKU:
+- Create Procfile using commands:
+ $ pip3 freeze --local > requirements.txt
+
+ $ echo web: python app.py > Procfile
+- Create a new app in Heroku platform, enter a new app name and then create app by choosing also the region name.
+- Select GITHUB as deployment method and connect GITHUB account to Heroku.
+- Go to Settings and find Config Vars, then in Reveal Config Var enter the env.py variables:
+ 1. IP
+ 2. PORT
+ 3. SECRET_KEY
+ 4. MONGO_URI
+ 5. MONGO_DBNAME
+- Push requirements.txt and Procfile to repository.
+- On Deploy App section in Heroku click on "Enable Automatic Deploys" and then "Deploy Branch", once done a message will show: "Your app was successfully deployed"
+- View deployed project by clicking on "View" to launch the app.
+
+
+
 
 
 

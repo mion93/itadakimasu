@@ -210,7 +210,7 @@ nav ul li:hover {
 
 #register_button {
     border-radius: 10px;
-    padding: 10 10 10 10px;
+    
 }
 
 /* ----------------------------------------------------------------------LOGIN PAGE */
@@ -231,16 +231,15 @@ nav ul li:hover {
 
 #row_flashes {
     font-family: 'Montserrat', sans-serif;
-
     margin-top: 20px;
-    text-shadow: 1 1 1 2px black;
+  
 }
 
 /* main hero button */
 
 .slider .btn {
   margin-top: 20px;
-  padding: 20 60 60 20px;
+  
   border-radius: 10px;
 
 }
@@ -248,8 +247,8 @@ nav ul li:hover {
 
 
 .hero-image {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 
@@ -260,7 +259,6 @@ nav ul li:hover {
 
 #username_profile {
     font-family: 'Montserrat', sans-serif;
-    text-shadow: 1 1 1 2px black;
      font-style: normal; 
 }
 
@@ -305,7 +303,6 @@ nav ul li:hover {
 .price {
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
-    margin: 20 20 20 20px;
     padding-left: 30px;
 }
 

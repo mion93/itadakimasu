@@ -19,11 +19,11 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 
 #### LOGO
-![ITADAKIMASU](/static/images/LOGO.png)
+
 * ITADAKIMASU in Japanese means 'I humbly receive' or can be interpreted by "Let's enjoy our food'. This word shows gratefulness for the meal by Japanese culture.
 * The Red Dot represent the Japanese flag, so I decided to use it to have a connection with Japan.
 ![JAPAN FLAG](/static/images/Japan-flag-wallpaper-12.gif)
-![ITADAKIMASU](/static/images/logo.png)
+![ITADAKIMASU](/static/images/logo.PNG)
 
 
 ### WIREFRAMES 

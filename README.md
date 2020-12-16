@@ -25,6 +25,9 @@ This website can be used not only by beginners who wants to be inspired and disc
 ![JAPAN FLAG](/static/images/Japan-flag-wallpaper-12.gif)
 ![ITADAKIMASU](/static/images/logo.PNG)
 
+#### FONT
+
+* For this Project I used [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Roboto](https://fonts.google.com/specimen/Roboto). 
 
 ### WIREFRAMES 
 
@@ -42,17 +45,27 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 ### FRAMEWORKS - DATABASE - LIBRARIES
 
-* [MATERIALIZECSS](http://materializecss.com/)
+* [MATERIALIZECSS](http://materializecss.com/) 
+  For responsiveness and styling the website
 * [JQUERY](https://en.wikipedia.org/wiki/JQuery)
+ Javascript Library 
 * [FLASK](https://en.wikipedia.org/wiki/Flask_(web_framework))
+ Python Web Framework
 * [WERKZEUG](https://werkzeug.palletsprojects.com/en/1.0.x/)
+ Used with Flask for password hashing and autentification
 * [MONGODB](https://en.wikipedia.org/wiki/MongoDB)
+ Database used for Itadakimasu Recipes
 * [HEROKU](https://en.wikipedia.org/wiki/Heroku)
+App for project deployment
 * [GITHUB](https://en.wikipedia.org/wiki/GitHub)
 * [GOOGLE-FONTS](https://fonts.google.com/)
+ To import Montserrat and Roboto 
 * [FONT-AWESOME](https://fontawesome.com/)
+ To import icons for UX purposes
 * [FAVICON](http://faviconer.com/)
+To create website icon
 * [GIT](https://en.wikipedia.org/wiki/Git)
+ Version control and adding, committing and pushing to GitHub from GitPod
 
 ## TESTING 
 
@@ -78,3 +91,10 @@ Used for no copyright images
 * Articles:
 [Culture Trip](https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/)
 [BBC FOOD](https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese)
+
+
+## Acknowledgments
+
+* My Code Institute Mentor Gerard Mcbride for support and help.
+* Slack Community for the support.
+* Code Institute Tutors for help.

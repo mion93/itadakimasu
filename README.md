@@ -26,24 +26,24 @@ This website can be used not only by beginners who wants to be inspired and disc
 ## TECHNOLOGIES USED 
 
 ### LANGUAGES 
-* HTML
-* CSS
-* JAVASCRIPT
-* PYTHON
+* [HTML](https://en.wikipedia.org/wiki/HTML5)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
+* [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### FRAMEWORKS - DATABASE - LIBRARIES
 
-* MATERIALIZE CSS
-* JQUERY 
-* FLASK 
-* WERKZEUG
-* MONGO DB 
-* HEROKU
-* GITHUB
-* GOOGLE FONTS
-* FONT AWESOME
-* FAVICON
-* GIT
+* [MATERIALIZECSS](http://materializecss.com/)
+* [JQUERY](https://en.wikipedia.org/wiki/JQuery)
+* [FLASK] 
+* [WERKZEUG]
+* [MONGODB] 
+* [HEROKU]
+* [GITHUB]
+* [GOOGLE-FONTS]
+* [FONT-AWESOME]
+* [FAVICON]
+* [GIT]
 
 ## TESTING 
 

@@ -28,8 +28,106 @@ nav ul li:hover {
        margin-top: 10px;
    }
 }
+/*-----------------------------------------------------------------HOME SEARCH BAR  */
 
-/*----------------------------------------------------------------HOME  footer  */
+#search-button {
+    border-radius: 0;
+}
+
+#close-button {
+    border-radius: 0;
+}
+
+
+
+/* -----------------------------------------HOME EMBED VIDEO */
+
+
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
+
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*--------------------------------------------------------------HOME ARTICLES */
+
+@media only screen and (max-width: 320px) {
+
+   #article1, #article2 { 
+      font-size: 5px; 
+   }
+
+}
+
+/* ------------------------------------------------HOME GALLERY */
+
+
+
+
+#discover_japan {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+   
+
+}
+
+
+/*-----------------------------------------------------------------------------HOME RECIPE CARD */
+
+
+
+.card-image {
+   width: 85%;
+   height: 100px;
+   margin: auto;
+   overflow: hidden;
+   border-radius: 2px;
+   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image img {
+   height: 150px;
+   object-fit: cover;
+}
+
+.recipe-container {
+    height: 400px;
+    opacity: 0.9;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+.recipe-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title-card {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+
+/*----------------------------------------------------------------HOME  FOOTER */
 #copyright {
     margin-top: 5px;
     margin-bottom: 10px;
@@ -115,7 +213,7 @@ nav ul li:hover {
     padding: 10 10 10 10px;
 }
 
-/* ---------------------------------------------------------LOGIN PAGE */
+/* ----------------------------------------------------------------------LOGIN PAGE */
 
 .login-sign-form-container {
     background-image: url('https://images.unsplash.com/photo-1562436260-8c9216eeb703?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=939&q=80');
@@ -158,54 +256,7 @@ nav ul li:hover {
 
 
 
-/* -----------------------------------------HOME EMBED VIDEO */
-
-
-
-.video-container {
-    overflow: hidden;
-    position: relative;
-    width:100%;
-}
-
-.video-container::after {
-    padding-top: 56.25%;
-    display: block;
-    content: '';
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* ------------------------------------------------HOME GALLERY */
-
-
-
-
-#discover_japan {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-   
-
-}
-
-
-/*--------------------------------------------------------------HOME ARTICLES */
-
-@media only screen and (max-width: 320px) {
-
-   #article1, #article2 { 
-      font-size: 5px; 
-   }
-
-}
-
-/* --------------------------------------------------------------PROFILE PAGE */
+/* -----------------------------------------------------------------------PROFILE PAGE */
 
 #username_profile {
     font-family: 'Montserrat', sans-serif;
@@ -213,17 +264,7 @@ nav ul li:hover {
      font-style: normal; 
 }
 
-.background-profile {
-    background-image: url('https://images.unsplash.com/photo-1576863514292-542ef379c13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80');
-     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    position: absolute;
-    left: 0;
-    top: 55px;
-    width: 100%;
-    height: 100%;
-}
+
 
 
 
@@ -238,42 +279,6 @@ nav ul li:hover {
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;
   opacity: 1; /* Firefox */
-}
-
-/*-----------------------------------------------------------------------------HOME RECIPE CARD */
-
-
-
-.card-image {
-   width: 85%;
-   height: 100px;
-   margin: auto;
-   overflow: hidden;
-   border-radius: 2px;
-   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card-image img {
-   height: 150px;
-   object-fit: cover;
-}
-
-.recipe-container {
-    height: 400px;
-    opacity: 0.9;
-    font-family: 'Montserrat', sans-serif;
-    
-}
-
-
-.recipe-card {
-    border-radius: 10px;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.title-card {
-    font-family: 'Roboto', sans-serif;
-    
 }
 
 
@@ -309,23 +314,23 @@ nav ul li:hover {
 /* -----------------------------------------------------------------GO TO TOP BUTTON */
 
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #ff5252; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 12px; /* Some padding */
-  border-radius: 50px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none; 
+  position: fixed;
+  bottom: 20px;
+  right: 30px; 
+  z-index: 99; 
+  border: none;
+  outline: none; 
+  background-color: #ff5252; 
+  color: white;
+  cursor: pointer;
+  padding: 12px; 
+  border-radius: 50px; 
+  font-size: 18px; 
 }
 
 #myBtn:hover {
-  background-color: black; /* Add a dark-grey background on hover */
+  background-color: black; 
 }
 
 

@@ -31,23 +31,25 @@
   </nav>
 
   -- SEARCH DIV-->
-                <div class=" card-panel col-xs-12 col-md-4 col-sm-12">
+                <div class="card-small">
                     <form action="{{ url_for('search') }}" method="post" class="col s12">
                         <div class="row valign-wrapper center-align">
-                            <div class="input-field col s12 black-text">
-                                <input type="text" name="query" id="query" class="validate">
-                                <label for="query" class="red-text">Search Recipes</label>
+                            <div class="input-field col s12 black-text" style="background:rgba(255,255,255, 0.8);">
+                                <input type="text" name="query" id="query" class="validate" >
+                                <label for="query" class="black-text">Search Recipes</label>
                             </div>
-                            <div class="col s12 m4">
+                           
+                            <div class="row">
 
-                                <button type="submit" class="btn red accent-2 waves-effect waves-light"><i
+                                <button type="submit" class="btn red accent-2 waves-effect waves-light" id="search-button"><i
                                         class="fas fa-search"></i>
 
                                 </button>
                                 <a href="{{ url_for('get_recipes') }}"
-                                    class="btn red accent-2 waves-effect waves-light"><i
+                                    class="btn red accent-2 waves-effect waves-light" id="close-button"><i
                                         class="fas fa-window-close"></i></a>
                             </div>
+                            
                         </div>
                     </form>
                 </div>
@@ -231,5 +233,8 @@
     </div>
 
 </section>
+
+
+ 
 
 {% endblock %}

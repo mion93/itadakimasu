@@ -84,6 +84,8 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
+    
+
     if session["user"]:
         return render_template("profile.html", username=username)
 
@@ -123,7 +125,7 @@ def add_recipe():
         flash("Recipe Successfully Added")
         return redirect(url_for("add_recipe"))
 
-    return render_template("add_recipe.html")    
+    return render_template("get_recipes.html")    
 
 
 
@@ -149,6 +151,7 @@ def edit_recipe(recipe_id):
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
+        flash("Recipe Edited!")
         return redirect(url_for("get_recipes"))
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("edit_recipe.html", recipe=recipe)
@@ -159,6 +162,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     """Find recipe and remove from the db"""
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Deleted!")
     return redirect(url_for("get_recipes"))
 
 

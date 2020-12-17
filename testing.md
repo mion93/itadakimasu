@@ -36,9 +36,12 @@ The recipe is been sent to MongoDB database in Recipe collection.
 
 By clicking on "Edit" button on the single recipe, user can edit/modify its own recipe by changing the fields in the form.
 After submitting the edited recipe user will be redirected to get_recipes.html.
-Edited fields will show on the recipe modified by user.
+Edited fields will show the recipe modified by user and the flash message "Recipe Edited!" and redirect user to get_recipes.html.
 
+## DELETE RECIPE
 
+By clicking "Delete" in the recipe card, if user is logged can manage to see this functionality and cancel the recipe.
+By cancelling it, the recipe will be removed from the Database collection and a flash message will appear "Recipe Deleted!"
 ## LOGIN & SIGN UP
 
 ### Registration:

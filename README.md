@@ -37,6 +37,17 @@ Wireframes:
 [Wireframes](/static/files/wireframes.pdf)
 
 ## FEATURES 
+### HOMEPAGE 
+
+### REGISTER/LOGIN
+
+### PROFILE 
+
+### SHOP
+
+### ADD RECIPE
+
+### EDIT RECIPE
 
 
 ## TECHNOLOGIES USED 

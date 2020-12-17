@@ -1,7 +1,7 @@
-# ***TESTING***
+# TESTING
 
 * Testing Deployment to Heroku: 
-- After adding, committing and pushing my project to GitHub I checked if the app successfully launches to Heroku.
+After adding, committing and pushing my project to GitHub I checked if the app successfully launches to Heroku.
 
 # RESPONSIVENESS:
 Testing recipe cards and responsive images in get_recipes.html and shop.html
@@ -23,16 +23,21 @@ and "image_url" that is displayed at the top of the page.
 * If the user is logged in, can see "Edit" and "Delete" button functionality in its
 own recipes. 
 * If the user is logged in and clicks on "Show" button in Recipe card, will be redirected to view_recipe.html, if the recipe
-it's made by the same user, Edit and Delete buttons are being shown.
-* If the recipe is not made by the same user, Edit and Delete buttons will not display in the recipe.
+it's made by the same user, "Edit" and "Delete" buttons are being shown.
+* If the recipe is not made by the same user, "Edit" and "Delete" buttons will not display in the recipe.
 
 
 # ADD RECIPE
-Testing forms for submitting the Recipe to MongoDB
+Testing forms for submitting the Recipe to MongoDB:
 By compiling the form with a new recipe and following each step, the recipe is submitted by clicking "Submit".
 The recipe is been sent to MongoDB database in Recipe collection.
 
 # EDIT RECIPE
+
+By clicking on "Edit" button on the single recipe, user can edit/modify its own recipe by changing the fields in the form.
+After submitting the edited recipe user will be redirected to get_recipes.html.
+Edited fields will show on the recipe modified by user.
+
 
 # LOGIN & SIGN UP
 
@@ -52,7 +57,7 @@ Login Successful, a message will appear saying "Irasshaimase! Welcome, [username
 # SEARCH BAR NAVIGATION
 * By searching a recently added recipe from the search bar = Results show the following recipe.
 * By Searching a random recipe / not spelt correctly = No result found. 
-* Search and cancel button are correctly working.
+* "Search" and "cancel" button are correctly working.
 
 # SHOP
 

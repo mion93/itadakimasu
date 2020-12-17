@@ -33,7 +33,7 @@ This website can be used not only by beginners who wants to be inspired and disc
 ### WIREFRAMES 
 
 Wireframes:
-*[Wireframes](/static/files/wireframes.pdf)
+[Wireframes](/static/files/wireframes.pdf)
 
 ## FEATURES 
 

@@ -32,9 +32,9 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 ### WIREFRAMES 
 
-Please find below Wireframes:
- [Wireframes](/static/files/wireframes.pdf)
- 
+Wireframes:
+*[Wireframes](/static/files/wireframes.pdf)
+
 ## FEATURES 
 
 

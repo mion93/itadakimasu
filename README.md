@@ -82,6 +82,10 @@ JShint -
 * Python
 Pep8 -
 
+### MANUAL TESTING 
+
+Please find manual testing in ![Testing.md](testing.md)
+
 ## DEPLOYMENT 
 
 ### Heroku deployment

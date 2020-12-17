@@ -21,14 +21,15 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 #### LOGO
 
-* ITADAKIMASU in Japanese means 'I humbly receive' or can be interpreted by "Let's enjoy our food'. This word shows gratefulness for the meal by Japanese culture.
-* The Red Dot represent the Japanese flag, so I decided to use it to have a connection with Japan.
+* ITADAKIMASU in Japanese means 'I humbly receive' or can be interpreted by "Let's enjoy our food'. This word shows gratefulness of the meal.
+* The Red Dot is being used not only as a FAVICON but also rapresents the Japanese flag, so I decided to use it to have a connection with Japan.
+
 ![JAPAN FLAG](/static/images/Japan-flag-wallpaper-12.gif)
 ![ITADAKIMASU](/static/images/logo.PNG)
 
 #### FONT
 
-* For this Project I used [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Roboto](https://fonts.google.com/specimen/Roboto). 
+* For this Project I used [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Roboto](https://fonts.google.com/specimen/Roboto) from Google Fonts.
 
 ### WIREFRAMES 
 
@@ -73,7 +74,7 @@ To create website icon
 
 ## TESTING 
 
-* HTML
+* HTML 
 
 * CSS
 W3CValidator CSS
@@ -123,22 +124,23 @@ Using automatic deployment from GITPOD to HEROKU:
 
 ## CREDITS
 
-* MATERIALIZE FRAMEWORK
+* MATERIALIZE FRAMEWORK:
  Navbar, buttons, parallax, sliders, cards, forms, responsiveness)
 
-* Stack Overflow
+* Stack Overflow:
  Used for fixing responsiveness bugs.
 
-* Unspleash
+* Unspleash:
 Used for no copyright images
 
-* Amazon
+* Amazon:
  Used for images and URL of the books
 
 * Articles:
 [Culture Trip](https://theculturetrip.com/asia/japan/articles/the-10-best-traditional-japanese-dishes/)
 [BBC FOOD](https://www.bbc.com/future/article/20200626-should-we-eat-more-like-the-japanese)
 
+* Balsamiq: Used for Wireframes
 
 ## Acknowledgments
 

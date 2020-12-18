@@ -84,12 +84,13 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    
+    recipes = mongo.recipes.find_all({"created_by": session['user']})
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username, recipe=recipe)
 
     return redirect(url_for("login"))
+
 
 # Log Out function
 @app.route("/logout")
@@ -125,7 +126,7 @@ def add_recipe():
         flash("Recipe Successfully Added")
         return redirect(url_for("add_recipe"))
 
-    return render_template("get_recipes.html")    
+    return render_template("add_recipe.html")    
 
 
 
@@ -169,7 +170,6 @@ def delete_recipe(recipe_id):
 # Search bar function
 @app.route("/search", methods=["GET", "POST"])
 def search():
-   
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("get_recipes.html", recipes=recipes)

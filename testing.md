@@ -42,20 +42,26 @@ Edited fields will show the recipe modified by user and the flash message "Recip
 
 By clicking "Delete" in the recipe card, if user is logged can manage to see this functionality and cancel the recipe.
 By cancelling it, the recipe will be removed from the Database collection and a flash message will appear "Recipe Deleted!"
-## LOGIN & SIGN UP
 
-### Registration:
+
+### REGISTRATION:
 Successful registration:
 - Compiled form with username and password, click on the register button and being redirected
 to profile page. " Registration Successful" will appear.
 * If the form is compiled with username or password length < 5 and > 15 characters an error will appear.
 
 
-### Login:
+### LOGIN:
 
 * By writing correct username and password to username and password fields.
 Login Successful, a message will appear saying "Irasshaimase! Welcome, [username]!"
 * By writing a wrong username or password to username and password fields.
+
+
+### PROFILE: 
+
+* By logging in the user is redirected to the Profile page will display the username and its own recipes, this recipes can be edited/deleted.
+
 
 ## SEARCH BAR NAVIGATION
 * By searching a recently added recipe from the search bar = Results show the following recipe.

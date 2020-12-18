@@ -37,17 +37,19 @@ Wireframes:
 [Wireframes](/static/files/wireframes.pdf)
 
 ## FEATURES 
-### HOMEPAGE 
 
-### REGISTER/LOGIN
+### CRUD FUNCTIONALITY
 
-### PROFILE 
+- **ADD RECIPE** Users can add a new recipe in the database by creating a new one. 
 
-### SHOP
+- **SHOW RECIPE** 
 
-### ADD RECIPE
+- **EDIT RECIPE**
 
-### EDIT RECIPE
+- **DELETE RECIPE** 
+
+
+### EDIT RECIPE / DELETE RECIPE
 
 
 ## TECHNOLOGIES USED 
@@ -127,7 +129,9 @@ Using automatic deployment from GITPOD to HEROKU:
 * Clone the repository by clicking and copying the link from "Clone with HTTPS".
 * Find and choose which location needs to be used for local clone.
 * In Git Bash paste the URL copied in to GitHub repository and press enter to create the local clone:
--  - ***git clone git@github.com:mion93/itadakimasu.git***
+ ```bash
+   git clone git@github.com:mion93/itadakimasu.git
+ ```
 * Create a new ***.env*** file for  environment variables.
 
 

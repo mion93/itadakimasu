@@ -1,11 +1,12 @@
 {% extends "base.html" %} 
 {% block content %}
 <main id="view_recipe">
-<h4 class="center" style="font-family: 'Montserrat', sans-serif;">
+    <!-- DISPLAY RECIPE-->
+<h4 class="center-align" style="font-family: 'Montserrat', sans-serif;">
       <span class="red-text"> {{ recipe.recipe_name }}</span> 
        <hr>
     <div class="row container recipe">
-    <div class="col s12 m12 16"><img class="responsive-img center" style="max-height: 45vh; max-width: 35vh;" src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}"></div>
+    <div class="col s12 m12 16"><img class=" responsive-img center-align" style="align-items: center; width: auto;" src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}"></div>
     <div class="row">
     
 
@@ -15,7 +16,7 @@
     <div class="col s12 center-align">
         <h6><b>INGREDIENTS</b></h6>
         <hr>
-        <p style="font-size: 17px;">{{ recipe.ingredients }}</p>
+        <p style="font-size: 17px; text-align: justify;">{{ recipe.ingredients }}</p>
     </div>
 
 
@@ -33,7 +34,7 @@
     <div class="col s12">
     <h6><b>METHOD</b></h6>
     <hr>
-        <p style="font-size: 17px;"> {{ recipe.method }}</p>
+        <p style="font-size: 17px; text-align: justify;"> {{ recipe.method }}</p>
     </div>
 </div>
 

@@ -43,9 +43,6 @@ nav ul li:hover {
 /* -----------------------------------------HOME EMBED VIDEO */
 
 /* ----------- This is to extend the width of the hero container*/
-.container {
-    width: 70%;
-}
 
 .video-container {
     overflow: hidden;
@@ -135,7 +132,8 @@ nav ul li:hover {
 #copyright {
     margin-top: 5px;
     margin-bottom: 5px;
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
 
 }
 

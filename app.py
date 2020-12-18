@@ -17,13 +17,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Get recipes
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("get_recipes.html", recipes=recipes)
-    
+
 
 # Register
 @app.route("/register", methods=["GET", "POST"])
@@ -49,6 +50,7 @@ def register():
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
+
 # Log In
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -58,9 +60,8 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            #  hashed password matches user input
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+            if check_password_hash(existing_user["password"],
+               request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     return redirect(url_for(
                         "profile", username=session["user"]))
@@ -76,6 +77,7 @@ def login():
 
     return render_template("login.html")
 
+
 # Profile Page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
@@ -86,8 +88,8 @@ def profile(username):
     recipes = mongo.db.recipes.find({"created_by": session['user']})
 
     if session["user"]:
-        return render_template("profile.html", username=username, recipe=recipes)
-
+        return render_template("profile.html", username=username,
+                               recipe=recipes)
     return redirect(url_for("login"))
 
 
@@ -100,7 +102,6 @@ def logout():
     return redirect(url_for("login"))
 
 
-
 # Shop recipe books function
 @app.route("/shop")
 def shop():
@@ -108,7 +109,6 @@ def shop():
 
 
 # Add recipe
-
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -124,9 +124,7 @@ def add_recipe():
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
         return redirect(url_for("add_recipe"))
-
-    return render_template("add_recipe.html")    
-
+    return render_template("add_recipe.html")
 
 
 # View Recipe

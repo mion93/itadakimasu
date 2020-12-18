@@ -40,13 +40,13 @@ Wireframes:
 
 ### CRUD FUNCTIONALITY
 
-- **ADD RECIPE** Users can add a new recipe in the database by creating a new one. 
+- [x] **ADD RECIPE** Users can add a new recipe in the database by creating a new one. 
 
-- **SHOW RECIPE** 
+- [x] **SHOW RECIPE** 
 
-- **EDIT RECIPE**
+- [x] **EDIT RECIPE**
 
-- **DELETE RECIPE** 
+- [x] **DELETE RECIPE** 
 
 
 ### EDIT RECIPE / DELETE RECIPE

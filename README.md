@@ -33,23 +33,24 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 ### WIREFRAMES 
 
-Wireframes:
+* Wireframes:
 [Wireframes](/static/files/wireframes.pdf)
 
 ## FEATURES 
 
 ### CRUD FUNCTIONALITY
 
-- [x] **ADD RECIPE** Users can add a new recipe in the database by creating a new one. 
-
-- [x] **SHOW RECIPE** 
-
-- [x] **EDIT RECIPE**
-
-- [x] **DELETE RECIPE** 
+- [x] **ADD RECIPE** = Users can create a new recipe in the database by adding a new one, they have to be logged in to access to "ADD RECIPE" function. 
 
 
-### EDIT RECIPE / DELETE RECIPE
+- [x] **SHOW RECIPE** = Recipes are displayed in the main page and can be shown by clicking "SHOW", users will be redirected to view_recipe page that will show all the informations about the recipe.
+
+
+- [x] **EDIT RECIPE** = If users are logged in, they can manage to edit their own recipes, by editing the informations in the form and submitting it. A flash message saying "Recipe Edited!" will appear.
+
+
+- [x] **DELETE RECIPE** = If users are logged in, they can delete their own recipes. A flash message saying "Recipe Deleted!" will appear.
+
 
 
 ## TECHNOLOGIES USED 
@@ -88,15 +89,16 @@ To create website icon
 ## TESTING 
 
 * HTML 
+W3CValidator HTML = SUCCESS
 
 * CSS
-W3CValidator CSS
+W3CValidator CSS = SUCCESS
 
 * Javascript
-JShint - 
+JShint = SUCCESS
 
 * Python
-Pep8 -
+Pep8 = SUCCESS
 
 ### MANUAL TESTING 
 

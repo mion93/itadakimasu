@@ -21,7 +21,7 @@ This website can be used not only by beginners who wants to be inspired and disc
 
 #### LOGO
 
-* ITADAKIMASU in Japanese means 'I humbly receive' or can be interpreted by "Let's enjoy our food'. This word shows gratefulness of the meal.
+* ITADAKIMASU in Japanese means 'I humbly receive' or can be interpreted by "Let's enjoy our food". This word shows gratefulness of the meal.
 * The Red Dot is being used not only as a FAVICON but also rapresents the Japanese flag, so I decided to use it to have a connection with Japan.
 
 ![JAPAN FLAG](/static/images/Japan-flag-wallpaper-12.gif)
@@ -37,6 +37,8 @@ This website can be used not only by beginners who wants to be inspired and disc
 [Wireframes](/static/files/wireframes.pdf)
 
 ## FEATURES 
+
+
 
 ### CRUD FUNCTIONALITY
 
@@ -92,7 +94,7 @@ To create website icon
 W3CValidator HTML = SUCCESS
 
 * CSS
-W3CValidator CSS = SUCCESS
+W3CValidator CSS = [ERROR] (/static/images/css-error.PNG)
 
 * Javascript
 JShint = SUCCESS

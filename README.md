@@ -104,7 +104,7 @@ Pep8 = SUCCESS
 
 ### MANUAL TESTING 
 
-Please find manual testing in ![Testing.md](testing.md)
+Please find manual testing in [Testing.md](testing.md)
 
 ## DEPLOYMENT 
 

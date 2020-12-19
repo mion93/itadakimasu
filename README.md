@@ -94,7 +94,7 @@ To create website icon
 W3CValidator HTML = SUCCESS
 
 * CSS
-W3CValidator CSS = [ERROR] (/static/images/css-error.PNG)
+W3CValidator CSS = [ERROR](/static/images/css-error.PNG)
 
 * Javascript
 JShint = SUCCESS
